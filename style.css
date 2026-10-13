@@ -14,7 +14,7 @@ body{
     height: 70px;
 
     display: flex;
-    align-item: center;
+    align-items: center;
     justify-content: space-between;
     padding: 0 8%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -201,4 +201,91 @@ footer{
 
     text-align: center;
     padding: 25px;
+}
+.about-image {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+.about-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.about-features article {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    flex: 1 1 200px;
+}
+
+.about-features h3 {
+    margin-bottom: 12px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 5%;
+        position: relative;
+    }
+
+    #menuBtn {
+        display: block;
+        cursor: pointer;
+        padding: 8px 12px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        z-index: 10;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 5%;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+    .courses,
+    .about,
+    .contact {
+        padding: 40px 5%;
+    }
+
+    .course-card {
+        width: 100%;
+        max-width: 350px;
+    }
 }

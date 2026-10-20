@@ -56,3 +56,35 @@ if (quoteButton && quoteText) {
         quoteText.innerText = quotes[randomIndex];
     });
 }
+
+let seconds =0;
+let timerInterval = null;
+
+function updateTimer() {
+    seconds++;
+
+    let hours = Math.floor(seconds / 3600);
+    let minutes = Math.floor((seconds % 3600) / 60);
+    let secs = seconds % 60;
+    document.getElementById("timer").textContent=
+        String(hours).padStart(2,"0") + ":" +
+        String(minutes).padStart(2,"0") + ":" +
+        String(secs).padStart(2,"0");
+}
+
+document.getElementById("startTimer").addEventListener("click", function () {
+    if (timerInterval == null){
+        timerInterval = setInterval(updateTimer,1000);
+    }
+});
+
+document.getElementById("pauseTimer").addEventListener("click", function () {
+    clearInterval(timerInterval);
+    timerInterval = null;
+});
+document.getElementById("resetTimer").addEventListener("click", function () {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    seconds =0;
+    document.getElementById("timer").textContent ="00:00:00";
+});

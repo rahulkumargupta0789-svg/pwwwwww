@@ -29,10 +29,6 @@ body{
     display: flex;
     gap: 30px;
 }
-.nav-links{
-    display: flex;
-    gap: 30px;
-}
 .nav-links a:hover{
     color: #6c63ff;
 }
@@ -40,26 +36,17 @@ body{
     display: none;
 }
 
-.hero{
-    min-height: 500px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 70px 8%;
-    gap: 40px;
-}
 
 .hero{
-    min-height: 500px;
-
+    min-height: auto;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 70px 8%;
-    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 5%;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .hero-text {
@@ -180,11 +167,8 @@ body{
 
 .about p{
     max-width: 750px;
-    margin: 30px auto;
-
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    margin: 20px auto;
+    line-height: 1.7;
 }
 
 #contactForm textarea{
@@ -203,6 +187,7 @@ footer{
     padding: 25px;
 }
 .about-image {
+    display: block;
     width: 300px;
     max-width: 100%;
     height: auto;
@@ -288,4 +273,44 @@ footer{
         width: 100%;
         max-width: 350px;
     }
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    white-space: nowrap;
+
+}
+.courses {
+    width: 100%;
+    padding: 70px 8%;
+    text-align: center;
+    background-color: white;
+}
+.course-card {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+
+.study-timer {
+    width: 300px;
+    padding: 20px;
+    margin: 10px auto 20px;
+    text-align: center;
+    background-color: #fff3df;
+    border-radius: 15px;
+}
+
+.stidy-timer h3 {
+    font-size: 35px;
+    margin: 20px;
+
+}
+.study-timer button {
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
 }
